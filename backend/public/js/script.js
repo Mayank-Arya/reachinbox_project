@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const moreInfoList = document.getElementById("more-info-list");
 
 
-      interestedList.innerHTML = "";
-      notInterestedList.innerHTML = "";
-      moreInfoList.innerHTML = "";
+      // interestedList.innerHTML = "";
+      // notInterestedList.innerHTML = "";
+      // moreInfoList.innerHTML = "";
 
       emails.forEach((email) => {
         const emailItem = document.createElement("div");
