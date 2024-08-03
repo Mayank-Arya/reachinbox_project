@@ -185,7 +185,7 @@ app.post("/suggest-response", async (req, res) => {
   const prompt = `Suggest a response for the following email content: ${content}`;
   try {
     const response = await axios.post(
-      "https://api.openai.com/v1/chat/completions",
+      process.env.OPENAI_completion,
       {
         model: "gpt-3.5-turbo",
         messages: [{ role: "user", content: prompt }],
@@ -217,7 +217,7 @@ async function categorizeEmailContent(content) {
 
   try {
     const response = await axios.post(
-      "https://api.openai.com/v1/chat/completions",
+      process.env.OPENAI_completion,
       {
         model: "gpt-3.5-turbo",
         messages: [{ role: "user", content: prompt }],
