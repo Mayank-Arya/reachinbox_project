@@ -1,104 +1,132 @@
-body, h1, h2, h3, p {
+/* Reset margins and paddings for a clean slate */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f7f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(to right, #ece9e6, #ffffff); /* Soft gradient background */
+  color: #444;
+  line-height: 1.8;
+  padding: 30px;
 }
 
+/* Header styling */
 header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 header h1 {
-  font-size: 2.5em;
-  color: #2c3e50;
+  font-size: 3em;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 header h2 {
-  font-size: 1.5em;
-  color: #34495e;
+  font-size: 1.8em;
+  color: #555;
+  font-weight: normal;
 }
 
+/* Main content layout */
 main {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
+/* Categories section */
 .categories {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
+/* Individual category */
 .category {
   flex: 1 1 30%;
-  background: #fff;
-  border-radius: 8px;
+  background: #ffffff;
+  border-radius: 12px;
   border: 1px solid #ddd;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Category headings */
 .category h3 {
-  margin: 0 0 15px;
-  font-size: 1.5em; /* Increased font size */
-  color: #2c3e50;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 10px; /* Added padding for better spacing */
-  text-align: center; /* Center the text */
-  background-color: #f9f9f9; /* Light background for headings */
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #333;
+  border-bottom: 3px solid #5e9ca0;
+  padding-bottom: 10px;
+  background-color: #f4f4f4;
+  text-align: center;
 }
 
+/* Email list styling */
 .email-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   overflow-y: auto;
 }
 
+/* Individual email item */
 .email-item {
-  background: #fafafa;
+  background: #fff;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.email-item:hover {
+  background: #f9f9f9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .email-item strong {
-  color: #3498db;
+  color: #5e9ca0;
 }
 
+/* Email item button */
 .email-item button {
-  background-color: #3498db;
+  background: #5e9ca0;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 5px 10px;
+  border-radius: 20px;
+  padding: 8px 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .email-item button:hover {
-  background-color: #2980b9;
+  background: #4a7f7d;
+  transform: scale(1.05);
 }
 
+/* Email content section */
 #email-content {
-  margin-top: 20px;
+  margin-top: 30px;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid #ddd;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }

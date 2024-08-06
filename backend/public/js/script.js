@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function fetchEmails() {
     try {
-      const response = await fetch("http://localhost:3000/api/emails");
+      const response = await fetch("https://reach-backend-ukik.onrender.com/api/emails");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.viewEmail = async function (emailId) {
     try {
-      const response = await fetch(`http://localhost:3000/email/${emailId}`);
+      const response = await fetch(`https://reach-backend-ukik.onrender.com/email/${emailId}`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function getSuggestion(emailContent) {
     try {
-      const response = await fetch("http://localhost:3000/suggest-response", {
+      const response = await fetch("https://reach-backend-ukik.onrender.com/suggest-response", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const suggestedResponse = document.getElementById("suggested-response").innerText;
 
     try {
-      const response = await fetch("http://localhost:3000/send-email", {
+      const response = await fetch("https://reach-backend-ukik.onrender.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

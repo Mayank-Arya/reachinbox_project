@@ -1,9 +1,9 @@
 document.getElementById("login-btn").addEventListener("click", () => {
-  window.location.href = "http://localhost:3000/auth/google";
+  window.location.href = "https://reach-backend-ukik.onrender.com/auth/google";
 });
 
 window.onload = () => {
-  fetch("http://localhost:3000/api/user")
+  fetch("https://reach-backend-ukik.onrender.com/api/user")
     .then((response) => response.json())
     .then((user) => {
       if (user.email) {

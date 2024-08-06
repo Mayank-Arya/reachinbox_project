@@ -1,36 +1,61 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Use a modern font and ensure full height */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  #login-btn {
-    background-color: #4285f4;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  #login-btn:hover {
-    background-color: #357ae8;
-  }
-  
-  #user-info {
-    margin-top: 20px;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+}
+
+/* Centering the container and adding a box shadow */
+.container {
+  text-align: center;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Stylish login button with gradient */
+#login-btn {
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient button */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 30px; /* Rounded corners */
+  transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Button hover effect */
+#login-btn:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  transform: scale(1.05); /* Slightly enlarge button */
+}
+
+/* Adding a subtle shadow effect */
+#login-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* User info styling */
+#user-info {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Hidden class for elements */
+.hidden {
+  display: none;
+}
