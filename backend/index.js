@@ -407,7 +407,7 @@ async function checkForNewEmails() {
 }
 
 
-setInterval(checkForNewEmails, 6000);
+setInterval(checkForNewEmails, 60000);
 
 setInterval(checkForNewEmails, 5 * 60 * 1000);
 
